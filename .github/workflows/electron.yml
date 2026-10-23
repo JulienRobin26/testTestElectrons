@@ -1,0 +1,40 @@
+name: Tester et construire Electron
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verification-et-construction:
+    runs-on: windows-latest
+
+    steps:
+      - name: Récupérer le code du dépôt
+        uses: actions/checkout@v7
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Exécuter les tests
+        run: npm test
+
+      - name: Fabriquer l’application Windows
+        run: npm run make
+
+      - name: Conserver les fichiers générés
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-windows
+          path: out/make/
+          if-no-files-found: error
+          retention-days: 7
