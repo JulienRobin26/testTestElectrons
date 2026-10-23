@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="snake-app">
+      <header class="runner-header">
+        <div>
+          <p class="runner-kicker">ARCADE // CLASSIC</p>
+          <h1>NEON <span>SNAKE</span></h1>
+        </div>
+        <div class="score-panel">
+          <span>SCORE</span>
+          <strong id="snake-score">00000</strong>
+        </div>
+      </header>
+
+      <section class="game-card snake-card" aria-label="Jeu Snake">
+        <div class="game-hud">
+          <span id="snake-status">Appuie sur commencer pour jouer</span>
+          <span>HI <strong id="snake-high-score">00000</strong></span>
+        </div>
+        <div id="snake-board" class="snake-board">
+          <canvas id="snake-canvas" width="400" height="400" aria-label="Plateau de jeu Snake"></canvas>
+          <div id="snake-game-over" class="game-over" hidden>
+            <p class="game-over-title">GAME OVER</p>
+            <p>TON SCORE <strong id="snake-final-score">00000</strong></p>
+            <p>HI SCORE <strong id="snake-final-high-score">00000</strong></p>
+            <button id="snake-restart" class="restart-button" type="button">RECOMMENCER</button>
+          </div>
+        </div>
+        <button id="snake-start" class="start-button" type="button">COMMENCER</button>
+        <p class="controls">FLÈCHES / ZQSD : DIRIGER LE SERPENT</p>
+      </section>
+    </main>
+    <script src="./snake.js"></script>
+    <form action="index.html" method="get">
+        <input id="retour" type="submit" value="RETOUR">
+  </body>
+</html>

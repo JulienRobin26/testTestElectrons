@@ -1,0 +1,22 @@
+{
+  "name": "testelectron",
+  "version": "1.0.0",
+  "description": "Hub de mini-jeux Electron",
+  "license": "ISC",
+  "author": "Julien Robin",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "description": "Hub de mini-jeux Electron",
+    "author": "Julien Robin"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^8.0.1",
+    "@electron-forge/maker-squirrel": "^8.0.1",
+    "electron": "^45.0.0"
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Dino Run</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="runner-app">
+      <header class="runner-header">
+        <div>
+          <p class="runner-kicker">ARCADE // RUNNER</p>
+          <h1>NEON DINO <span>RUN</span></h1>
+        </div>
+        <div class="score-panel">
+          <span>SCORE</span>
+          <strong id="score">00000</strong>
+        </div>
+      </header>
+      <section class="game-card" aria-label="Jeu de course du dinosaure">
+        <div class="game-hud">
+          <span id="game-status">Appuie sur espace pour commencer</span>
+          <span>HI <strong id="high-score">00000</strong></span>
+        </div>
+        <div id="game-area" class="game-area" tabindex="0" role="button" aria-label="Zone de jeu. Appuie sur espace ou clique pour sauter.">
+          <div class="stars" aria-hidden="true"></div>
+          <div id="dino" class="dino" aria-hidden="true">🦖</div>
+          <div class="ground" aria-hidden="true"></div>
+          <div id="game-over" class="game-over" hidden>
+            <p class="game-over-title">GAME OVER</p>
+            <p>TON SCORE <strong id="final-score">00000</strong></p>
+            <p>HI SCORE <strong id="final-high-score">00000</strong></p>
+            <button id="restart-button" class="restart-button" type="button">RECOMMENCER</button>
+          </div>
+        </div>
+        <button id="start-button" class="start-button" type="button">COMMENCER</button>
+        <p class="controls">ESPACE / FLÈCHE HAUT / CLIC : SAUTER</p>
+      </section>
+    </main>
+    <script src="./dino.js"></script>
+    <form action="index.html" method="get">
+        <input id="retour" type="submit" value="RETOUR">
+  </body>
+</html>

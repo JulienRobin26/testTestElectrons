@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de dames</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="checkers-app">
+      <header class="runner-header">
+        <div>
+          <p class="runner-kicker">ARCADE // STRATÉGIE</p>
+          <h1>JEU DE <span>DAMES</span></h1>
+        </div>
+        <div class="score-panel">
+          <span>TOUR</span>
+          <strong id="checkers-turn">ROUGE</strong>
+        </div>
+      </header>
+
+      <section class="game-card checkers-card" aria-label="Jeu de dames">
+        <p id="checkers-status" class="checkers-status" aria-live="polite">
+          Les rouges commencent. Sélectionne un pion.
+        </p>
+        <div id="checkers-board" class="checkers-board" role="grid" aria-label="Plateau de jeu de dames"></div>
+        <button id="checkers-start" class="start-button" type="button">NOUVELLE PARTIE</button>
+        <p class="controls">CLIQUE UN PION · PUIS UNE CASE COLORÉE POUR JOUER</p>
+      </section>
+      <a class="checkers-back" href="./index.html">RETOUR AU MENU</a>
+    </main>
+    <script src="./dames.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tetris</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="tetris-app">
+      <header class="runner-header">
+        <div>
+          <p class="runner-kicker">ARCADE // CLASSIC</p>
+          <h1>NEON <span>TETRIS</span></h1>
+        </div>
+        <div class="score-panel">
+          <span>SCORE</span>
+          <strong id="tetris-score">00000</strong>
+        </div>
+      </header>
+
+      <section class="game-card tetris-card" aria-label="Jeu Tetris">
+        <div class="game-hud">
+          <span id="tetris-status">Appuie sur commencer pour jouer</span>
+          <span>HI <strong id="tetris-high-score">00000</strong></span>
+        </div>
+        <div id="tetris-board" class="tetris-board">
+          <canvas id="tetris-canvas" width="240" height="480" aria-label="Plateau de jeu Tetris"></canvas>
+          <div id="tetris-game-over" class="game-over" hidden>
+            <p class="game-over-title">GAME OVER</p>
+            <p>TON SCORE <strong id="tetris-final-score">00000</strong></p>
+            <p>HI SCORE <strong id="tetris-final-high-score">00000</strong></p>
+            <button id="tetris-restart" class="restart-button" type="button">RECOMMENCER</button>
+          </div>
+        </div>
+        <button id="tetris-start" class="start-button" type="button">COMMENCER</button>
+        <p class="controls">← → DÉPLACER · ↑ TOURNER · ↓ ACCÉLÉRER · ESPACE : CHUTE</p>
+      </section>
+    </main>
+    <script src="./tetris.js"></script>
+    <form action="index.html" method="get">
+        <input id="retour" type="submit" value="RETOUR">
+  </body>
+</html>

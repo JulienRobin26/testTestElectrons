@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Chaser</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="maze-app">
+      <header class="runner-header">
+        <div>
+          <p class="runner-kicker">ARCADE // MAZE</p>
+          <h1>MAZE <span>CHASER</span></h1>
+        </div>
+        <div class="score-panel">
+          <span>SCORE</span>
+          <strong id="maze-score">00000</strong>
+        </div>
+      </header>
+      <section class="game-card maze-card" aria-label="Jeu de labyrinthe">
+        <div class="game-hud">
+          <span id="maze-status">Appuie sur commencer pour jouer</span>
+          <span>VIES <strong id="maze-lives">3</strong></span>
+        </div>
+        <div class="maze-board">
+          <canvas id="maze-canvas" width="420" height="420" aria-label="Labyrinthe"></canvas>
+          <div id="maze-over" class="game-over" hidden>
+            <p id="maze-result" class="game-over-title">GAME OVER</p>
+            <button id="maze-restart" class="restart-button" type="button">RECOMMENCER</button>
+          </div>
+        </div>
+        <button id="maze-start" class="start-button" type="button">COMMENCER</button>
+        <p class="controls">FLÈCHES / ZQSD : DÉPLACER LE CHASSEUR</p>
+      </section>
+      <a class="maze-back" href="./index.html">RETOUR AU MENU</a>
+    </main>
+    <script src="./pacman.js"></script>
+  </body>
+</html>
