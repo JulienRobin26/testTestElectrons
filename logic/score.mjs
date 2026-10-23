@@ -1,3 +1,3 @@
 export function ajouterPoints(scoreActuel) {
-  return scoreActuel + 10;
+  return scoreActuel + 1;
 }
